@@ -1,0 +1,32 @@
+<div class="app-container" fxFill fxLayout="column">
+  <mat-toolbar>
+    <button mat-icon-button (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div
+      class="title-container"
+      fxFlex
+      fxLayout.xs="column"
+      fxLayoutAlign="space-between center"
+      fxLayoutAlign.xs="center flex-start"
+    >
+      <span class="title" routerLink="/">{{title}}</span>
+    </div>
+  </mat-toolbar>
+
+  <mat-drawer-container fxFlex>
+    <mat-drawer
+      #drawer
+      color="primary"
+      mode="{{media.isActive('gt-sm') ? 'side' : 'over'}}"
+      opened="{{media.isActive('gt-sm') ? true : false}}"
+    >
+      <div class="drawer-content" fxFill fxLayout="column">
+        <app-generations></app-generations>
+        <app-pokemon-list class="pokemon-list" fxFlex></app-pokemon-list>
+      </div>
+    </mat-drawer>
+
+    <router-outlet></router-outlet>
+  </mat-drawer-container>
+</div>
