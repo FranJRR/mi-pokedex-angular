@@ -19,7 +19,7 @@
     "@types/jasmine": "3.5.14",
     "@types/jasminewd2": "2.0.9",
     "@types/node": "12.20.15",
-    "node": "^16.1.0",
+    "node": "14.x",
     "rxjs": "6.5.5",
     "tslib": "2.2.0",
     "zone.js": "0.10.3"
