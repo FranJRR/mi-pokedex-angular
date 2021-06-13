@@ -3,6 +3,7 @@ import { MediaObserver } from '@angular/flex-layout';
 import { MatSidenav } from '@angular/material/sidenav';
 // Services
 import { SidenavService } from './services/sidenav/sidenav.service';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
