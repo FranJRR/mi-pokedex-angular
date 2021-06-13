@@ -33,6 +33,7 @@ import { WeightPipe } from './pipes/weight/weight.pipe';
 import { ImagePreloadDirective } from './directives/image-preload.directive';
 import { PokemonHeaderComponent } from './components/pokemon-header/pokemon-header.component';
 import { EvolutionComponent } from './components/evolution/evolution.component';
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,7 @@ import { EvolutionComponent } from './components/evolution/evolution.component';
     MatTableModule,
     MatToolbarModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
