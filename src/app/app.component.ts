@@ -18,7 +18,8 @@ export class AppComponent {
 
   constructor(
     public media: MediaObserver,
-    private sidenavService: SidenavService
+    private sidenavService: SidenavService,
+  public authService: AuthService
   ) {}
 
   ngAfterViewInit(): void {
