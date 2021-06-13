@@ -7,6 +7,7 @@ import { Species } from '../../interfaces/species';
 // Services
 import { PokemonService } from '../../services/pokemon/pokemon.service';
 import { SidenavService } from '../../services/sidenav/sidenav.service';
+import { AuthService } from '../..//auth.service';
 
 @Component({
   selector: 'app-initial',
@@ -23,8 +24,9 @@ export class InitialComponent implements OnInit {
   constructor(
     public media: MediaObserver,
     private pokemonService: PokemonService,
-    private sidenavService: SidenavService
-  ) { }
+    private sidenavService: SidenavService,
+    public authService: AuthService
+  ) {}
 
   ngOnInit(): void {
     this.pokemonId = this.getRandomId();
@@ -40,9 +42,10 @@ export class InitialComponent implements OnInit {
 
     if (!this.pokemon) {
       this.isLoadingPokemon = true;
-      this.pokemonService.fetchPokemon(this.pokemonId)
-      .pipe(finalize(() => this.isLoadingPokemon = false))
-      .subscribe(pokemon => this.pokemon = pokemon);
+      this.pokemonService
+        .fetchPokemon(this.pokemonId)
+        .pipe(finalize(() => (this.isLoadingPokemon = false)))
+        .subscribe(pokemon => (this.pokemon = pokemon));
     }
   }
 
@@ -51,8 +54,8 @@ export class InitialComponent implements OnInit {
    */
   getRandomId() {
     const min = 1,
-          max = 721,
-          id = Math.floor(Math.random() * (max - min + 1)) + min;
+      max = 721,
+      id = Math.floor(Math.random() * (max - min + 1)) + min;
 
     return id.toString();
   }
@@ -63,5 +66,4 @@ export class InitialComponent implements OnInit {
   openDrawer() {
     this.sidenavService.open();
   }
-
 }

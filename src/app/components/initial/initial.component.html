@@ -13,11 +13,7 @@
     <app-pokemon-header [pokemon]="pokemon"></app-pokemon-header>
   </div>
 
-  <div
-    class="hello-there"
-    fxLayout="column"
-    fxLayoutAlign="space-between center"
-  >
+  <div class="hello-there" fxLayout="column" fxLayoutAlign="space-between center">
     <p>
       <b>Bienvenidos</b> esta es tu pokedex de confianza en la cual podras
       iniciar sesion con tu cuenta de google y ver tus pokemons favoritos.
@@ -33,5 +29,10 @@
     >
       Abrir Pokédex
     </button>
+    <div class="formGroup">
+      <button type="button" (click)="authService.GoogleAuth()">
+    Log in with Google
+  </button>
+    </div>
   </div>
 </div>
