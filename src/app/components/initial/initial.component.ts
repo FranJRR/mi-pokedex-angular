@@ -7,7 +7,6 @@ import { Species } from '../../interfaces/species';
 // Services
 import { PokemonService } from '../../services/pokemon/pokemon.service';
 import { SidenavService } from '../../services/sidenav/sidenav.service';
-import { AuthService } from '../..//auth.service';
 
 @Component({
   selector: 'app-initial',
@@ -24,9 +23,8 @@ export class InitialComponent implements OnInit {
   constructor(
     public media: MediaObserver,
     private pokemonService: PokemonService,
-    private sidenavService: SidenavService,
-    public authService: AuthService
-  ) {}
+    private sidenavService: SidenavService
+      ) {}
 
   ngOnInit(): void {
     this.pokemonId = this.getRandomId();
