@@ -3,7 +3,6 @@ import { MediaObserver } from '@angular/flex-layout';
 import { MatSidenav } from '@angular/material/sidenav';
 // Services
 import { SidenavService } from './services/sidenav/sidenav.service';
-import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +18,6 @@ export class AppComponent {
   constructor(
     public media: MediaObserver,
     private sidenavService: SidenavService,
-  public authService: AuthService
   ) {}
 
   ngAfterViewInit(): void {
