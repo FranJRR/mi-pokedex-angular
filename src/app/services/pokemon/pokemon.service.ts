@@ -198,7 +198,7 @@ export class PokemonService {
     // Dex entry:
     if (species?.flavor_text_entries?.length && !species.dex_entry) {
       // Filter only English entries:
-      species.flavor_text_entries = species.flavor_text_entries.filter(entry => entry?.language?.name === 'en');
+      species.flavor_text_entries = species.flavor_text_entries.filter(entry => entry?.language?.name === 'e');
       // Get the newest entry:
       species.dex_entry = species.flavor_text_entries[species.flavor_text_entries.length - 1].flavor_text;
     }
