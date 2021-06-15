@@ -7,6 +7,7 @@ $radius: 20px;
   height: spacing(5);
   margin: spacing(2) spacing();
   position: relative;
+  margin-bottom: 25px;
   width: calc(100% - #{spacing(2)});
 
   &.current,
