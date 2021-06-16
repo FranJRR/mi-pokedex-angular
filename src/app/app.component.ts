@@ -1,9 +1,9 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { MediaObserver } from '@angular/flex-layout';
 import { MatSidenav } from '@angular/material/sidenav';
 // Services
 import { SidenavService } from './services/sidenav/sidenav.service';
-import * a firebase from 'firebase';
+import * firebase from 'firebase';
 
 @Component({
   selector: 'app-root',
@@ -23,5 +23,12 @@ export class AppComponent {
 
   ngAfterViewInit(): void {
     this.sidenavService.setSidenav(this.sidenav);
+  }
+  
+  ngOnInit():void{
+    firebase.initializeApp({
+      apiKey: "AIzaSyCGQCc2PCFEMU4PRBjzEUDyPPF7zDMzHns",
+      authDomain: "pokeangular-d7a8b.firebaseapp.com",
+    })
   }
 }
