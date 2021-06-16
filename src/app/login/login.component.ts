@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { LoginService } from './login.service';
+// import { LoginService } from './login.service';
 
 @Component({
   selector: 'app-login',
@@ -9,6 +9,7 @@ import { LoginService } from './login.service';
 })
 export class LoginComponent implements OnInit {
   constructor(private loginService: LoginService) {}
+
 
   ngOnInit() {}
   login(form: NgForm) {
