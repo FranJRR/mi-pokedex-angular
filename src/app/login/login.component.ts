@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { LoginService } from '../login.service';
 // import { LoginService } from './login.service';
 
 @Component({
@@ -8,8 +9,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  constructor(private loginService: LoginService) {}
-
+  constructor(private loginService: LoginService){}
 
   ngOnInit() {}
   login(form: NgForm) {
