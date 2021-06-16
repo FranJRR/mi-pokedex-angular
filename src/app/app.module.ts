@@ -34,6 +34,7 @@ import { ImagePreloadDirective } from './directives/image-preload.directive';
 import { PokemonHeaderComponent } from './components/pokemon-header/pokemon-header.component';
 import { EvolutionComponent } from './components/evolution/evolution.component';
 import { LoginComponent } from './login/login.component';
+import { LoginService } from './login.service';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { LoginComponent } from './login/login.component';
     MatTableModule,
     MatToolbarModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [LoginService]
 })
 export class AppModule {}
