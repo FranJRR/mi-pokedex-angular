@@ -23,4 +23,7 @@ export class LoginService {
           });
       });
   }
+  getIdToken() {
+    return this.token;
+  }
 }
