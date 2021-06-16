@@ -9,7 +9,7 @@ import {Login} from './login/login.component';
 const routes: Routes = [
   { path: '', component: InitialComponent, pathMatch: 'full' },
   { path: 'pokemon/:id', component: PokemonComponent },
-  { path: 'login', component: ogin },
+  { path: 'login', component: Login },
 
   
 ];
